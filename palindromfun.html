@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript "this"</h1>
+
+<button id="click">Click Me!</button>
+
+<p id="empty"></p>
+
+<script>
+let hello = "";
+
+hello = () => {
+  document.getElementById("empty").innerHTML += this;
+}
+
+window.addEventListener("load", hello);
+
+document.getElementById("click").addEventListener("click", hello);
+</script>
+</body>
+</html>
